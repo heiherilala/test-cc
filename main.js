@@ -97,16 +97,12 @@ export function simulateRiceCooker() {
   while (condition) {
     displayMenu();
 
-    let isNotValideNumber = true;
-    while (isNotValideNumber) {
       input = prompt('Enter your choice: ');
-      isNotValideNumber = !isNumeric(input)
-      if (isNotValideNumber) {
+      if (!isNumeric(input)) {
         console.log('Invalid input. Please enter a valid number.');
-        continue
+        return
       }
-      break
-    }
+
     const choice = parseInt(input);
     if (!isNaN(choice)) {
       switch (choice) {
