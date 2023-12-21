@@ -680,6 +680,8 @@ choice => 1 unité
 input => 1 unité
 condition => 1 unité
 
+Même si "choice" est dans une boucle, pour js, puisqu'il a déjà été initialisé, les autres parties de la boucle n'en initialiseront pas de nouveaux, ils utiliseront simplement ceux qui existent déjà. donc pas *n
+
 Donc;
 
 - ***Pour le cas "choice === 6" : (3 + 17n) opérations élémentaires + 3 unités de mémoir; avec Complexiter O(n)***
@@ -774,6 +776,8 @@ this.ricePresent, this.heatingInProgress et this.riceCooked sont déjà instanci
 choice => 1 unité
 input => 1 unité
 condition => 1 unité
+
+Même si "choice" est dans une boucle, pour js, puisqu'il a déjà été initialisé, les autres parties de la boucle n'en initialiseront pas de nouveaux, ils utiliseront simplement ceux qui existent déjà. donc pas *n
 
 Donc;
 
