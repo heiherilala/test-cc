@@ -40,6 +40,9 @@ exemple
 - un variabel [[int]] => 32bit*n*n => O(n²)
 - une variable bitArray => peut utiliser des millions de bit
 
+Pour faciliter les choses, nous avons simplement ajouté 1 unité de mémoire à tous les types de variables, 
+donc ; 1 int => 1 unité | 1 bitArray => 1 unité | 1 [int] => 1*n unités ...
+
 ## addRice
 
 #### Mayah code
@@ -70,6 +73,9 @@ Bloc else (si la condition est fausse) :
 ``
 Les opérations dans les if non vérifiés ne sont pas exécutées, donc si la condition est fausse, nous n'ajoutons pas ce qu'il y a à l'intérieur.
 ``
+
+* Spatial:
+this.ricePresent est déjà instancié par la classe et non par la fonction, donc la fonction l'utilise seulement, c'est-à-dire 0 unité.
 
 Donc,
 
@@ -105,10 +111,15 @@ Bloc (si la condition est fausse) :
 Les opérations dans les if non vérifiés ne sont pas exécutées, donc si la condition est fausse, nous n'ajoutons pas ce qu'il y a à l'intérieur.
 ``
 
+* Spatial:
+this.ricePresent est déjà instancié par la classe et non par la fonction, donc la fonction l'utilise seulement, c'est-à-dire 0 unité.
+
 Donc,
 
 - ***if true : 5 opérations élémentaires; avec Complexiter O(1)***
 - ***if falce : 3  opérations élémentaires; avec Complexiter O(1)***
+
+
 
 ## cookRice
 
@@ -154,6 +165,9 @@ Bloc else (si les deux conditions précédentes sont fausses) :
 ``
 Les opérations dans les if non vérifiés ne sont pas exécutées, donc si la condition est fausse, nous n'ajoutons pas ce qu'il y a à l'intérieur.
 ``
+
+* Spatial:
+this.ricePresent et this.riceCooked sont déjà instanciés par la classe et non par la fonction, donc la fonction l'utilise seulement, c'est-à-dire 0 unité.
 
 Donc,
 
@@ -205,6 +219,9 @@ Bloc else (si les deux conditions précédentes sont fausses) :
 ``
 Les opérations dans les if non vérifiés ne sont pas exécutées, donc si la condition est fausse, nous n'ajoutons pas ce qu'il y a à l'intérieur.
 ``
+
+* Spatial:
+this.ricePresent et this.riceCooked sont déjà instanciés par la classe et non par la fonction, donc la fonction l'utilise seulement, c'est-à-dire 0 unité.
 
 Donc,
 
@@ -258,6 +275,9 @@ Bloc else (si les deux conditions précédentes sont fausses) :
 Les opérations dans les if non vérifiés ne sont pas exécutées, donc si la condition est fausse, nous n'ajoutons pas ce qu'il y a à l'intérieur.
 ``
 
+* Spatial:
+this.ricePresent, this.steamingInProgress et this.riceCooked sont déjà instanciés par la classe et non par la fonction, donc la fonction l'utilise seulement, c'est-à-dire 0 unité.
+
 Donc,
 
 - ***première condition est vraie : 8 opérations élémentaires; avec Complexiter O(1)***
@@ -310,6 +330,10 @@ Bloc else (si les deux conditions précédentes sont fausses) :
 ``
 Les opérations dans les if non vérifiés ne sont pas exécutées, donc si la condition est fausse, nous n'ajoutons pas ce qu'il y a à l'intérieur.
 ``
+
+
+* Spatial:
+this.ricePresent, this.steamingInProgress et this.riceCooked sont déjà instanciés par la classe et non par la fonction, donc la fonction l'utilise seulement, c'est-à-dire 0 unité.
 
 Donc,
 
@@ -366,6 +390,10 @@ Bloc else (si toutes les conditions précédentes sont fausses) :
 ``
 Les opérations dans les if non vérifiés ne sont pas exécutées, donc si la condition est fausse, nous n'ajoutons pas ce qu'il y a à l'intérieur.
 ``
+
+
+* Spatial:
+this.ricePresent, this.heatingInProgress et this.riceCooked sont déjà instanciés par la classe et non par la fonction, donc la fonction l'utilise seulement, c'est-à-dire 0 unité.
 
 Donc,
 
@@ -429,6 +457,9 @@ Bloc else (si toutes les conditions précédentes sont fausses) :
 Les opérations dans les if non vérifiés ne sont pas exécutées, donc si la condition est fausse, nous n'ajoutons pas ce qu'il y a à l'intérieur.
 ``
 
+* Spatial:
+this.ricePresent, this.heatingInProgress et this.riceCooked sont déjà instanciés par la classe et non par la fonction, donc la fonction l'utilise seulement, c'est-à-dire 0 unité.
+
 Donc,
 
 - ***première condition est vraie : 8 opérations élémentaires; avec Complexiter O(1)***
@@ -474,6 +505,9 @@ Bloc else (si la condition est fausse) :
 Les opérations dans les if non vérifiés ne sont pas exécutées, donc si la condition est fausse, nous n'ajoutons pas ce qu'il y a à l'intérieur.
 ``
 
+* Spatial:
+this.ricePresent, this.heatingInProgress et this.riceCooked sont déjà instanciés par la classe et non par la fonction, donc la fonction l'utilise seulement, c'est-à-dire 0 unité.
+
 Donc,
 
 - ***est vraie : 9 opérations élémentaires; avec Complexiter O(1)***
@@ -513,6 +547,9 @@ Bloc else (si la condition est fausse) :
 ``
 Les opérations dans les if non vérifiés ne sont pas exécutées, donc si la condition est fausse, nous n'ajoutons pas ce qu'il y a à l'intérieur.
 ``
+
+* Spatial:
+this.ricePresent, this.heatingInProgress et this.riceCooked sont déjà instanciés par la classe et non par la fonction, donc la fonction l'utilise seulement, c'est-à-dire 0 unité.
 
 Donc,
 
@@ -589,7 +626,7 @@ Conversion de l'entrée en entier :
 
 2em if-else pour les choix de l'utilisateur :
 >1 opération if\
->1 opération pour else. (du 1er if)\
+>1 opération pour else. (du 1er if)\- une variable bitArray => peut utiliser des millions d'octaves
 
 2emer est vraie :
 >1 opération if
@@ -637,9 +674,15 @@ Calculons seulement le cas ou "choice === 6", c'est le cas le plus gourment en t
 Les opérations dans les if non vérifiés ne sont pas exécutées, donc si la condition est fausse, nous n'ajoutons pas ce qu'il y a à l'intérieur.
 ``
 
+* Spatial:
+this.ricePresent, this.heatingInProgress et this.riceCooked sont déjà instanciés par la classe et non par la fonction, donc la fonction l'utilise seulement, c'est-à-dire 0 unité.
+choice => 1 unité
+input => 1 unité
+condition => 1 unité
+
 Donc;
 
-- ***Pour le cas "choice === 6" : (3 + 21n) opérations élémentaires; avec Complexiter O(n)***
+- ***Pour le cas "choice === 6" : (3 + 17n) opérations élémentaires + 3 unités de mémoir; avec Complexiter O(n)***
 
 #### Ma vertion de code
 ```js
@@ -664,7 +707,11 @@ export function simulateRiceCooker() {
           break;
         case 2:
           riceCooker.cookRice();
-          break;
+          break;* Spatial:
+this.ricePresent, this.heatingInProgress et this.riceCooked sont déjà instanciés par la classe et non par la fonction, donc la fonction l'utilise seulement, c'est-à-dire 0 unité.
+choice => 1 unité
+input => 1 unité
+condition => 1 unité
         case 3:
           riceCooker.steam();
           break;
@@ -722,9 +769,15 @@ Sortie de la boucle et affichage du message de sortie :
 Les opérations dans les if non vérifiés ne sont pas exécutées, donc si la condition est fausse, nous n'ajoutons pas ce qu'il y a à l'intérieur.
 ``
 
+* Spatial:
+this.ricePresent, this.heatingInProgress et this.riceCooked sont déjà instanciés par la classe et non par la fonction, donc la fonction l'utilise seulement, c'est-à-dire 0 unité.
+choice => 1 unité
+input => 1 unité
+condition => 1 unité
+
 Donc;
 
-- ***Pour le cas "choice === 6" : (3 + 16n) opérations élémentaires; avec Complexiter O(n)***
+- ***Pour le cas "choice === 6" : (3 + 13n) opérations élémentaires + 3 unité de mémoir; avec Complexiter O(n)***
 
 ## Conclusion
 En règle générale, nous avons constaté que le code que nous avons modifié est toujours plus performant que la version précédente, s'il n'a pas la même complexité, alors que dans la plupart des cas, nous avons simplement supprimé les autres.
